@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h3><a href="/main">Назад к списку</a></h3>
+        <h2>{{ image.title }}</h2>
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+    <img src="{{ image.picture.url }}">
+</body>
+</html>

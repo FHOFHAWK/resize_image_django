@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Список изображений
+    <h1>
+        {% if images %}
+            <ul>
+                {% for image in images %}
+                    <li><a href = "retrieve_image/{{image.title}}">{{ image.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h2>Нет доступных изображений.</h2>
+        {% endif %}
+        <h3><a href="load_image">Добавить изображение</a></h3>
+</body>
+</html>
